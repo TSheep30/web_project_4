@@ -1,0 +1,14 @@
+@import url("./__close-button/container__close-button.css");
+
+.container {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 498px;
+  }
+}

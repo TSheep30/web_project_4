@@ -1,0 +1,14 @@
+@import url("../vendor/normalize.css");
+@import url("../fonts/fonts.css");
+@import url(../page/header/header.css);
+@import url("../page/profile/profile.css");
+@import url("./popup/popup.css");
+@import url("./popup/popup_opened.css");
+@import url("./photos/photos.css");
+@import url("./footer/footer.css");
+
+.page {
+  background-color: #000000;
+  margin: 0;
+  font-family: inter, sans-serif;
+}

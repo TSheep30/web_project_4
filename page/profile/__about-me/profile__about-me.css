@@ -1,0 +1,20 @@
+.profile__about-me {
+  color: #ffffff;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin-top: -4px;
+}
+
+@media (min-width: 1024px) {
+  .profile__about-me {
+    order: 4;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 150px;
+    margin-top: -72px;
+  }
+}

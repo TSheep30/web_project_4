@@ -1,0 +1,9 @@
+.photo-card__title {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .photo-card__title {
+    text-align: left;
+  }
+}

@@ -1,0 +1,24 @@
+.profile__edit-button {
+  background-image: url("../../../images/tick.svg");
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  align-self: center;
+  padding: inherit;
+  border: 1px solid white;
+}
+
+.profile__edit-button:hover {
+  background-image: url("../../../images/greytick.png");
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 1024px) {
+  .profile__edit-button {
+    width: 24px;
+    height: 24px;
+    align-self: unset;
+    margin-top: 78px;
+  }
+}

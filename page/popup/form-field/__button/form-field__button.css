@@ -1,0 +1,24 @@
+.form-field__button {
+  width: 210px;
+  height: 50px;
+  margin: 48px 36px 36px;
+  background-color: black;
+  border-radius: 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.form-field__button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 1024px) {
+  .form-field__button {
+    width: 358px;
+  }
+}

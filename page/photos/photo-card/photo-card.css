@@ -1,0 +1,17 @@
+@import url("./__image/photo-card__image.css");
+@import url("./__title/photo-card__title.css");
+@import url("./__info/photo-card__info.css");
+
+.photo-card {
+  background-color: white;
+  width: 282px;
+  margin: 20px auto 0 auto;
+  border-radius: 15px;
+  list-style: none;
+}
+
+@media (min-width: 1024px) {
+  .photo-card {
+    margin: 21px 6px 0 6px;
+  }
+}
