@@ -1,6 +1,6 @@
 .form-field__about-me {
   width: 210px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -12,6 +12,6 @@
 
 @media (min-width: 1024px) {
   .form-field__about-me {
-    width: 210px;
+    width: 358px;
   }
 }

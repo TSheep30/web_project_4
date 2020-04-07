@@ -1,6 +1,8 @@
 .profile__edit-button {
   background-image: url("../../../images/tick.svg");
-  background-size: cover;
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 18px;
   height: 18px;
   background-color: black;
@@ -19,6 +21,6 @@
     width: 24px;
     height: 24px;
     align-self: unset;
-    margin-top: 78px;
+    margin-top: 77px;
   }
 }

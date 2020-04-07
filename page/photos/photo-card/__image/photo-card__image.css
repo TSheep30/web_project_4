@@ -1,6 +1,7 @@
 .photo-card__image {
   width: 282px;
   height: 282px;
-  margin: auto;
-  border-radius: 15px;
+  margin: 0 auto 0 auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }

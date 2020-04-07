@@ -8,29 +8,21 @@ const profileAboutMe = document.querySelector(".profile__about-me");
 const saveButton = document.querySelector(".form-field__button");
 
 function pop() {
-  popup.setAttribute("class", "popup_opened");
-  name.setAttribute("value", profileName.textContent);
+  popup.classList.toggle("popup_opened");
+  name.value = profileName.textContent;
   aboutMe.setAttribute("value", profileAboutMe.textContent);
 }
 
-function unPop() {
-  popup.removeAttribute("class", "popup_opened");
-  popup.setAttribute("class", "popup");
-}
-
 editButton.addEventListener("click", pop);
-closeButton.addEventListener("click", unPop);
+closeButton.addEventListener("click", pop);
 
 function changeDetails(evt) {
   evt.preventDefault();
 
-  const formName = document.querySelector(".form-field__name");
-  const formAboutMe = document.querySelector(".form-field__about-me");
+  profileName.setAttribute("value", name.value);
+  profileAboutMe.setAttribute("value", aboutMe.value);
 
-  profileName.setAttribute("value", formName.value);
-  profileAboutMe.setAttribute("value", formAboutMe.value);
-
-  profileName.textContent = formName.value;
+  profileName.textContent = name.value;
   profileAboutMe.textContent = aboutMe.value;
   popup.setAttribute("class", "popup");
 }
