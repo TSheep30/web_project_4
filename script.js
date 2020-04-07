@@ -10,7 +10,7 @@ const saveButton = document.querySelector(".form-field__button");
 function pop() {
   popup.classList.toggle("popup_opened");
   name.value = profileName.textContent;
-  aboutMe.setAttribute("value", profileAboutMe.textContent);
+  aboutMe.value = profileAboutMe.textContent;
 }
 
 editButton.addEventListener("click", pop);
