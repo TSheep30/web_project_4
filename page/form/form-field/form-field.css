@@ -2,6 +2,7 @@
 @import url("./__name/form-field__name.css");
 @import url("./__about-me/form-field__about-me.css");
 @import url("./__button/form-field__button.css");
+@import url("./__close-button/form-field__close-button.css");
 
 .form-field {
   display: flex;

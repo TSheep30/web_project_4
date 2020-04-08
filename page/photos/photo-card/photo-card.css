@@ -1,6 +1,7 @@
 @import url("./__image/photo-card__image.css");
 @import url("./__title/photo-card__title.css");
 @import url("./__info/photo-card__info.css");
+@import url("./__icon/photo-card__icon.css");
 
 .photo-card {
   background-color: white;
@@ -12,6 +13,6 @@
 
 @media (min-width: 1024px) {
   .photo-card {
-    margin: 21px 6px 0 6px;
+    margin: 21px 8px 0 8px;
   }
 }

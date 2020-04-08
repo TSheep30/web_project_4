@@ -1,2 +1,6 @@
 @import url("./photo-card/photo-card.css");
 @import url("./__list/photos__list.css");
+
+.photos {
+  margin-top: -5px;
+}

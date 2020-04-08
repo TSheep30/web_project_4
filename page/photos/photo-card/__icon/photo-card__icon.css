@@ -1,0 +1,9 @@
+.photo-card__icon {
+  background-image: url("../../../../images/Vectorhearticon.svg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  border: none;
+  background-position: center;
+  width: 40px;
+  padding: 0;
+}
