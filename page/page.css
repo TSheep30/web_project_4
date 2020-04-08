@@ -5,6 +5,7 @@
 @import url("./form/form.css");
 @import url("./form/form_opened.css");
 @import url("./photos/photos.css");
+@import url("./photo-card/photo-card.css");
 @import url("./footer/footer.css");
 
 .page {

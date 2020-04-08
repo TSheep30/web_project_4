@@ -9,6 +9,7 @@
   align-self: center;
   padding: inherit;
   border: 1px solid white;
+  margin-top: 32px;
 }
 
 .profile__edit-button:hover {
