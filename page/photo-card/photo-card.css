@@ -1,7 +1,9 @@
 @import url("./__image/photo-card__image.css");
 @import url("./__title/photo-card__title.css");
 @import url("./__info/photo-card__info.css");
-@import url("./__icon/photo-card__icon.css");
+@import url("./__like-button/photo-card__like-button.css");
+@import url("./__like-button/photo-card__like-button_on.css");
+@import url("./delete-button/photo-card__delete-button.css");
 
 .photo-card {
   background-color: white;

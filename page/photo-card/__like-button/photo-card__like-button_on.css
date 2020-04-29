@@ -1,0 +1,10 @@
+.photo-card__like-button_on {
+    background-image: url("../../../images/blackheart-icon.svg");
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border: none;
+    background-position: center;
+    width: 40px;
+    padding: 0;
+  }
+  

@@ -1,4 +1,6 @@
 .photo-card__image {
+  background-repeat: no-repeat;
+  background-size: 282px 282px;
   width: 282px;
   height: 282px;
   margin: 0 auto 0 auto;

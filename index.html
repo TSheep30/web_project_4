@@ -1,117 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Around the US</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body class="page">
-    <section class="form">
-      <form class="form-field">
-        <button class="form-field__close-button"></button>
-        <h2 class="form-field__title">Edit Profile</h2>
-        <input type="text" class="form-field__name" value="Name" />
-        <input type="text" class="form-field__about-me" value="About me" />
-        <input type="submit" value="Save" class="form-field__button" />
-      </form>
+  <title>Around the US</title>
+
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body class="page">
+  <section class="form form_edit">
+    <form class="form-field">
+      <button class="form-field__close-button"></button>
+      <h2 class="form-field__title">Edit Profile</h2>
+      <input type="text" class="form-field__name" value="Name" />
+      <input type="text" class="form-field__about-me" value="About me" />
+      <input type="submit" value="Save" class="form-field__button form-field__button_save" />
+    </form>
+  </section>
+  <section class="form form_add">
+    <form class="form-field">
+      <button class="form-field__close-button"></button>
+      <h2 class="form-field__title">New Place</h2>
+      <input type="text" class="form-field__place" value="Title" />
+      <input type="text" class="form-field__link" value="Image link" />
+      <input type="submit" value="Create" class="form-field__button form-field__button_create" />
+    </form>
+  </section>
+  <header class="header">
+    <img src="./images/logo.svg" class="header__logo" alt="logo" />
+  </header>
+  <main>
+    <section class="profile">
+      <img src="images/imageprofile-pic.jpg" class="profile__picture" alt="profile picture" />
+      <div class="profile__info">
+        <h1 class="profile__name">Jacques Cousteau</h1>
+        <button class="profile__edit-button"></button>
+      </div>
+
+      <p class="profile__about-me">Explorer</p>
+      <button class="profile__add-button"></button>
     </section>
-    <header class="header">
-      <img src="./images/logo.svg" class="header__logo" alt="logo" />
-    </header>
-    <main>
-      <section class="profile">
-        <img
-          src="images/imageprofile-pic.jpg"
-          class="profile__picture"
-          alt="profile picture"
-        />
-        <div class="profile__info">
-          <h1 class="profile__name">Jacques Cousteau</h1>
-          <button class="profile__edit-button"></button>
-        </div>
 
-        <p class="profile__about-me">Explorer</p>
-        <button class="profile__add-button"></button>
-      </section>
+    <section class="photos">
+      <ul class="photos__list"></ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">© 2020 Around The U.S.</p>
+  </footer>
+  <template class="template-card">
+    <li class="photo-card">
+      <div class="photo-card__image"></div>
+      <button type="button" class="photo-card__delete-button"></button>
+      <div class="photo-card__info">
+        <h2 class="photo-card__title"></h2>
+        <button type="button" class="photo-card__like-button"></button>
+      </div>
+    </li>
+  </template>
+  <script src="./script.js"></script>
+</body>
 
-      <section class="photos">
-        <ul class="photos__list">
-          <li class="photo-card">
-            <img
-              src="./images/YosemiteValley.jpg"
-              alt="Yosemite Valley"
-              class="photo-card__image"
-            />
-            <div class="photo-card__info">
-              <h2 class="photo-card__title">Yosemite Valley</h2>
-              <button class="photo-card__icon"></button>
-            </div>
-          </li>
-          <li class="photo-card">
-            <img
-              src="./images/LakeLouise.jpg"
-              alt="Lake Louise"
-              class="photo-card__image"
-            />
-            <div class="photo-card__info">
-              <h2 class="photo-card__title">Lake Louise</h2>
-              <button class="photo-card__icon"></button>
-            </div>
-          </li>
-          <li class="photo-card">
-            <img
-              src="./images/BaldMountains.jpg"
-              alt="Bald Mountains"
-              class="photo-card__image"
-            />
-            <div class="photo-card__info">
-              <h2 class="photo-card__title">Bald Mountains</h2>
-              <button class="photo-card__icon"></button>
-            </div>
-          </li>
-          <li class="photo-card">
-            <img
-              src="./images/Latemar.jpg"
-              alt="Latemar"
-              class="photo-card__image"
-            />
-            <div class="photo-card__info">
-              <h2 class="photo-card__title">Latemar</h2>
-              <button class="photo-card__icon"></button>
-            </div>
-          </li>
-          <li class="photo-card">
-            <img
-              src="./images/Vanois.jpg"
-              alt="Vanois National Park"
-              class="photo-card__image"
-            />
-            <div class="photo-card__info">
-              <h2 class="photo-card__title">Vanois National Park</h2>
-              <button class="photo-card__icon"></button>
-            </div>
-          </li>
-          <li class="photo-card">
-            <img
-              src="./images/LagoDiBraies.jpg"
-              alt="Lago di Braies"
-              class="photo-card__image"
-            />
-            <div class="photo-card__info">
-              <h2 class="photo-card__title">Lago di Braies</h2>
-              <button class="photo-card__icon"></button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <footer class="footer">
-      <p class="footer__copyright">© 2020 Around The U.S.</p>
-    </footer>
-
-    <script src="./script.js"></script>
-  </body>
 </html>
