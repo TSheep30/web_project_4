@@ -1,4 +1,4 @@
-.form-field__close-button_add {
+.modal-field__close-button_add {
     background-image: url(../../../../images/closeicon.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,15 +11,16 @@
     border: 0;
   }
   
-  .form-field__close-button_add:hover {
+  .modal-field__close-button_add:hover {
     background-image: url(../../../../images/closeicongrey.svg);
     transform: rotate(45deg);
   }
   
+
+  
+ 
   @media (min-width: 1024px) {
-    .form-field__close-button_add {
+    .modal-field__close-button_add {
       top: -32px;
       left: 423px;
     }
-  }
-  

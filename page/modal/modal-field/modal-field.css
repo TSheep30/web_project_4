@@ -1,0 +1,29 @@
+@import url("./__title/modal-field__title.css");
+@import url("./__name/modal-field__name.css");
+@import url("./__about-me/modal-field__about-me.css");
+@import url("./__button/modal-field__button.css");
+@import url("./__close-button/modal-field__close-button_add.css");
+@import url("./__close-button/modal-field__close-button_edit.css");
+@import url("./__close-button/modal-field__close-button_picture.css");
+@import url("./__place/modal-field__place.css");
+@import url("./__link/modal-field__link.css");
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+  width: 282px;
+  height: 330px;
+  border-radius: 5px;
+  margin: auto;
+  top: 140px;
+}
+
+@media (min-width: 1024px) {
+  .modal-field {
+    width: 430px;
+    height: 330px;
+    top: 132px;
+  }
+}

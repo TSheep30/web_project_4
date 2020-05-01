@@ -1,4 +1,4 @@
-.form-field__button {
+.modal-field__button {
   width: 210px;
   height: 50px;
   margin: 48px 36px 36px;
@@ -13,12 +13,12 @@
   color: #ffffff;
 }
 
-.form-field__button:hover {
+.modal-field__button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 1024px) {
-  .form-field__button {
+  .modal-field__button {
     width: 358px;
   }
 }

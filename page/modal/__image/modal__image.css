@@ -1,4 +1,4 @@
-.popup_image {
+.modal__image {
     display: flex;
     flex-direction: column;
     background-color: white;

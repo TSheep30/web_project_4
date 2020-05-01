@@ -2,12 +2,12 @@
 @import url("../fonts/fonts.css");
 @import url(../page/header/header.css);
 @import url("../page/profile/profile.css");
-@import url("./form/form.css");
-@import url("./form/form_opened.css");
+@import url("./modal/modal.css");
+@import url("./modal/modal_opened.css");
 @import url("./photos/photos.css");
 @import url("./photo-card/photo-card.css");
 @import url("./footer/footer.css");
-@import url("./popup/popup.css");
+@import url("./popup1/popup.css");
 
 
 .page {

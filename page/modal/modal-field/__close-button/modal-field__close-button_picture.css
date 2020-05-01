@@ -1,25 +1,21 @@
-.form-field__close-button_edit {
+.modal-field__close-button_picture {
     background-image: url(../../../../images/closeicon.svg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 40px;
     height: 40px;
     position: absolute;
-    top: -40px;
-    left: 250px;
+    top: 54px;
+    align-self: flex-end;
     background-color: rgba(0, 0, 0, 0);
     border: 0;
+    padding: 0;
+    margin-left: 35px;
   }
   
-  .form-field__close-button_edit:hover {
+  .modal-field__close-button_picture:hover {
     background-image: url(../../../../images/closeicongrey.svg);
     transform: rotate(45deg);
   }
   
-  @media (min-width: 1024px) {
-    .form-field__close-button_edit {
-      top: -32px;
-      left: 423px;
-    }
-  }
   
