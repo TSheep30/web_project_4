@@ -13,7 +13,7 @@
 <body class="page">
   <section class="form form_edit">
     <form class="form-field">
-      <button class="form-field__close-button"></button>
+      <button class="form-field__close-button_edit"></button>
       <h2 class="form-field__title">Edit Profile</h2>
       <input type="text" class="form-field__name" value="Name" />
       <input type="text" class="form-field__about-me" value="About me" />
@@ -21,14 +21,22 @@
     </form>
   </section>
   <section class="form form_add">
-    <form class="form-field">
-      <button class="form-field__close-button"></button>
+    <form class="form form-field">
+      <button class="form-field__close-button_add"></button>
       <h2 class="form-field__title">New Place</h2>
       <input type="text" class="form-field__place" value="Title" />
-      <input type="text" class="form-field__link" value="Image link" />
+      <input type="url" class="form-field__link" value="Image link" />
       <input type="submit" value="Create" class="form-field__button form-field__button_create" />
     </form>
   </section>
+
+  <section class="form_picture">
+    <div class="picture_container"><button class="form-field__close-button_picture"></button>
+      <img src="images/BaldMountains.jpg" class="popup_image">
+      <p class="popup_title">London</p>
+    </div>
+  </section>
+
   <header class="header">
     <img src="./images/logo.svg" class="header__logo" alt="logo" />
   </header>
@@ -53,7 +61,7 @@
   </footer>
   <template class="template-card">
     <li class="photo-card">
-      <div class="photo-card__image"></div>
+      <button type="button" class="photo-card__image"></button>
       <button type="button" class="photo-card__delete-button"></button>
       <div class="photo-card__info">
         <h2 class="photo-card__title"></h2>

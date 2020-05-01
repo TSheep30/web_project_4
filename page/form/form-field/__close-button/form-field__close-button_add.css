@@ -1,0 +1,25 @@
+.form-field__close-button_add {
+    background-image: url(../../../../images/closeicon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+    left: 250px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .form-field__close-button_add:hover {
+    background-image: url(../../../../images/closeicongrey.svg);
+    transform: rotate(45deg);
+  }
+  
+  @media (min-width: 1024px) {
+    .form-field__close-button_add {
+      top: -32px;
+      left: 423px;
+    }
+  }
+  

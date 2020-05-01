@@ -1,0 +1,10 @@
+.popup_image {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
+  
+  

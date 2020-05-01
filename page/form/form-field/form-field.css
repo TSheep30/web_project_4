@@ -2,7 +2,9 @@
 @import url("./__name/form-field__name.css");
 @import url("./__about-me/form-field__about-me.css");
 @import url("./__button/form-field__button.css");
-@import url("./__close-button/form-field__close-button.css");
+@import url("./__close-button/form-field__close-button_add.css");
+@import url("./__close-button/form-field__close-button_edit.css");
+@import url("./__close-button/form-field__close-button_picture.css");
 @import url("./__place/form-field__place.css");
 @import url("./__link/form-field__link.css");
 

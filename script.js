@@ -1,6 +1,6 @@
 const editButton = document.querySelector(".profile__edit-button");
 const popupEdit = document.querySelector(".form_edit");
-const closeButton = document.querySelector(".form-field__close-button");
+const editCloseButton = document.querySelector(".form-field__close-button_edit");
 const name = document.querySelector(".form-field__name");
 const aboutMe = document.querySelector(".form-field__about-me");
 const profileName = document.querySelector(".profile__name");
@@ -8,61 +8,10 @@ const profileAboutMe = document.querySelector(".profile__about-me");
 const saveButton = document.querySelector(".form-field__button_save");
 const addButton = document.querySelector(".profile__add-button");
 const popupAdd = document.querySelector(".form_add");
+const addCloseButton = document.querySelector(".form-field__close-button_add");
 const createButton = document.querySelector(".form-field__button_create");
 const templateCard = document.querySelector(".template-card").content.querySelector(".photo-card");
-
-
-function pop() {
-  popupEdit.classList.toggle("form_opened");
-  name.value = profileName.textContent;
-  aboutMe.value = profileAboutMe.textContent;
-}
-
-function open() {
-  popupAdd.classList.toggle("form_opened");
-}
-
-editButton.addEventListener("click", pop);
-closeButton.addEventListener("click", pop);
-addButton.addEventListener("click", open);
-
-
-function changeDetails(evt) {
-  evt.preventDefault();
-
-  profileName.setAttribute("value", name.value);
-  profileAboutMe.setAttribute("value", aboutMe.value);
-
-  profileName.textContent = name.value;
-  profileAboutMe.textContent = aboutMe.value;
-  popupEdit.setAttribute("class", "form");
-}
-
-popupEdit.addEventListener("submit", changeDetails);
-
-function addCards(evt) {
-  evt.preventDefault();
-
-  const addCard = document.querySelector(".photos__list");
-  const photoCard = templateCard.cloneNode(true);
-  const photoLink = popupAdd.querySelector(".form-field__link");
-  const photoPlace = popupAdd.querySelector(".form-field__place");
-  const photoImage = photoCard.querySelector(".photo-card__image");
-  const photoTitle = photoCard.querySelector(".photo-card__title");
-
-  photoImage.setAttribute("value", photoLink.value);
-  photoTitle.setAttribute("value", photoPlace.value);
-
-  photoImage.style.backgroundImage = `url(${photoLink.value})`;
-  photoTitle.textContent = photoPlace.value;
-
-  addCard.prepend(photoCard);
-  popupAdd.classList.toggle("form_opened");
-}
-
-createButton.addEventListener("click", addCards);
-
-
+const popupPicture = document.querySelector(".form_picture");
 
 const initialCards = [
   {
@@ -91,6 +40,58 @@ const initialCards = [
   },
 ];
 
+function pop() {
+  popupEdit.classList.toggle("form_opened");
+  name.value = profileName.textContent;
+  aboutMe.value = profileAboutMe.textContent;
+}
+
+function open() {
+  popupAdd.classList.toggle("form_opened");
+}
+
+editButton.addEventListener("click", pop);
+editCloseButton.addEventListener("click", pop);
+addButton.addEventListener("click", open);
+addCloseButton.addEventListener("click", open);
+
+function changeDetails(evt) {
+  evt.preventDefault();
+
+  profileName.setAttribute("value", name.value);
+  profileAboutMe.setAttribute("value", aboutMe.value);
+
+  profileName.textContent = name.value;
+  profileAboutMe.textContent = aboutMe.value;
+  popupEdit.setAttribute("class", "form");
+
+}
+
+popupEdit.addEventListener("submit", changeDetails);
+
+function addCards(evt) {
+  evt.preventDefault();
+
+  const addCard = document.querySelector(".photos__list");
+  const photoCard = templateCard.cloneNode(true);
+  const photoLink = popupAdd.querySelector(".form-field__link");
+  const photoPlace = popupAdd.querySelector(".form-field__place");
+  const photoImage = photoCard.querySelector(".photo-card__image");
+  const photoTitle = photoCard.querySelector(".photo-card__title");
+
+  photoImage.setAttribute("value", photoLink.value);
+  photoTitle.setAttribute("value", photoPlace.value);
+
+  photoImage.style.backgroundImage = `url(${photoLink.value})`;
+  photoTitle.textContent = photoPlace.value;
+
+  addCard.prepend(photoCard);
+  popupAdd.classList.toggle("form_opened");
+}
+
+createButton.addEventListener("click", addCards);
+
+
 initialCards.forEach((card) => {
   const photoCard = templateCard.cloneNode(true);
 
@@ -102,8 +103,8 @@ initialCards.forEach((card) => {
   photoImage.style.backgroundImage = `url(${card.link})`;
   photoTitle.textContent = card.name;
 
-  photoImage.addEventListener("click", () => {
-    // openPopUpImage
+  photoCard.addEventListener("click", () => {
+    popupPicture.classList.toggle("popup_opened");
   });
 
   photoLikeButton.addEventListener("click", () => {
