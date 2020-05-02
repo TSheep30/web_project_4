@@ -1,6 +1,6 @@
 .photo-card__delete-button {
     background-image: url("../../../images/Trashwhitedeleteicon.svg");
-    height: 18px;
+    background-size: 18px 16px;
     background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0);
   border: none;
