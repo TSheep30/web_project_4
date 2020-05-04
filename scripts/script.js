@@ -47,10 +47,6 @@ function togglePopup(modal) {
   modal.classList.toggle("modal_opened");
   name.setAttribute("placeholder", profileName.textContent);
   aboutMe.setAttribute("placeholder", profileAboutMe.textContent);
-
-  console.log(name);
-
-  console.log(profileAboutMe);
 }
 
 function changeDetails(evt) {
