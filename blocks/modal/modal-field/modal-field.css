@@ -2,7 +2,7 @@
 @import url("./__name/modal-field__name.css");
 @import url("./__about-me/modal-field__about-me.css");
 @import url("./__button/modal-field__button.css");
-@import url("./__close-button/modal-field__close-button.css");
+@import url("./__button/_close/modal-field__button_close.css");
 @import url("./__place/modal-field__place.css");
 @import url("./__link/modal-field__link.css");
 

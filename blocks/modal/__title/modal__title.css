@@ -1,11 +1,10 @@
-.modal__title{
-    font-family: Inter;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 15px;
-background-color: rgba(0,0,0,0);
-color: #FFFFFF;
-position: relative;
-
+.modal__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  position: relative;
 }

@@ -1,0 +1,37 @@
+.modal-field__button_close {
+  background-image: url(../../../../../images/closeicon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  align-self: flex-end;
+  padding: 0;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.modal-field__button_close.modal-field__button_close-picture {
+  top: 50px;
+}
+
+.modal-field__button_close:hover {
+  opacity: 0.5;
+}
+
+@media (min-width: 1024px) {
+  .modal-field__button_close {
+    top: -32px;
+    left: 423px;
+    margin-left: unset;
+  }
+
+  .modal-field__button_close.modal-field__button_close-picture {
+    top: 50px;
+    left: unset;
+    margin-left: 10px;
+  }
+}

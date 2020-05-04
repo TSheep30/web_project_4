@@ -1,8 +1,8 @@
 .photo-card__delete-button {
-    background-image: url("../../../images/Trashwhitedeleteicon.svg");
-    background-size: 18px 16px;
-    height: 18px;
-    background-repeat: no-repeat;
+  background-image: url("../../../images/Trashwhitedeleteicon.svg");
+  background-size: 18px 16px;
+  height: 18px;
+  background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   background-position: center;
@@ -13,5 +13,5 @@
 }
 
 .photo-card__delete-button:hover {
-    background-image: url(../../../images/Trashgreydeleteicon.svg);
-  }
+  background-image: url(../../../images/Trashgreydeleteicon.svg);
+}

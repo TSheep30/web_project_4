@@ -1,76 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Around the US</title>
 
-  <title>Around the US</title>
+    <link rel="stylesheet" href="./page/index.css" />
+  </head>
 
-  <link rel="stylesheet" href="./page/index.css" />
-</head>
-
-<body class="page">
-  <section class="modal modal_edit">
-    <form class="modal-field">
-      <button class="modal-field__close-button modal-field__close-button_edit"></button>
-      <h2 class="modal-field__title">Edit Profile</h2>
-      <input type="text" class="modal-field__name" value="Name" />
-      <input type="text" class="modal-field__about-me" value="About me" />
-      <input type="submit" value="Save" class="modal-field__button modal-field__button_save" />
-    </form>
-  </section>
-  <section class="modal modal_add">
-    <form class="modal-field">
-      <button type="button" class="modal-field__close-button modal-field__close-button_add"></button>
-      <h2 class="modal-field__title">New Place</h2>
-      <input type="text" class="modal-field__place" placeholder="Title" />
-      <input type="url" class="modal-field__link insert_url" placeholder="Image link" />
-      <input type="submit" value="Create" class="modal-field__button modal-field__button_create"
-        placeholder="Image link" />
-    </form>
-  </section>
-
-  <section class="modal modal_picture">
-    <div class="modal-container"><button class="modal-field__close-button modal-field__close-button_picture"></button>
-      <img src="" class="modal__image">
-      <p class="modal__title"></p>
-    </div>
-  </section>
-
-  <header class="header">
-    <img src="./images/logo.svg" class="header__logo" alt="logo" />
-  </header>
-  <main>
-    <section class="profile">
-      <img src="images/imageprofile-pic.jpg" class="profile__picture" alt="profile picture" />
-      <div class="profile__info">
-        <h1 class="profile__name">Jacques Cousteau</h1>
-        <button class="profile__edit-button"></button>
-      </div>
-
-      <p class="profile__about-me">Explorer</p>
-      <button class="profile__add-button"></button>
+  <body class="page">
+    <section class="modal modal_edit">
+      <form class="modal-field">
+        <button
+          class="modal-field__button_close modal-field__button_close-edit"
+        ></button>
+        <h2 class="modal-field__title">Edit Profile</h2>
+        <input type="text" class="modal-field__name" placeholder="Name" />
+        <input
+          type="text"
+          class="modal-field__about-me"
+          placeholder="About me"
+        />
+        <input
+          type="submit"
+          value="Save"
+          class="modal-field__button modal-field__button_save"
+        />
+      </form>
+    </section>
+    <section class="modal modal_add">
+      <form class="modal-field">
+        <button
+          type="button"
+          class="modal-field__button_close modal-field__button_close-add"
+        ></button>
+        <h2 class="modal-field__title">New Place</h2>
+        <input type="text" class="modal-field__place" placeholder="Title" />
+        <input
+          type="url"
+          class="modal-field__link insert_url"
+          placeholder="Image link"
+        />
+        <input
+          type="submit"
+          value="Create"
+          class="modal-field__button modal-field__button_create"
+          placeholder="Image link"
+        />
+      </form>
     </section>
 
-    <section class="photos">
-      <ul class="photos__list"></ul>
-    </section>
-  </main>
-  <footer class="footer">
-    <p class="footer__copyright">© 2020 Around The U.S.</p>
-  </footer>
-  <template class="template-card">
-    <li class="photo-card">
-      <div class="photo-card__image"></div>
-      <button type="button" class="photo-card__delete-button"></button>
-      <div class="photo-card__info">
-        <h2 class="photo-card__title"></h2>
-        <button type="button" class="photo-card__like-button"></button>
+    <section class="modal modal_picture">
+      <div class="modal-container">
+        <button
+          class="modal-field__button_close modal-field__button_close-picture"
+        ></button>
+        <img src="" class="modal__image" />
+        <p class="modal__title"></p>
       </div>
-    </li>
-  </template>
-  <script src="./scripts/script.js"></script>
-</body>
+    </section>
 
+    <header class="header">
+      <img src="./images/logo.svg" class="header__logo" alt="logo" />
+    </header>
+    <main>
+      <section class="profile">
+        <img
+          src="images/imageprofile-pic.jpg"
+          class="profile__picture"
+          alt="profile picture"
+        />
+        <div class="profile__info">
+          <h1 class="profile__name">Jacques Cousteau</h1>
+          <button class="profile__edit-button"></button>
+        </div>
+
+        <p class="profile__about-me">Explorer</p>
+        <button class="profile__add-button"></button>
+      </section>
+
+      <section class="photos">
+        <ul class="photos__list"></ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">© 2020 Around The U.S.</p>
+    </footer>
+    <template class="template-card">
+      <li class="photo-card">
+        <div class="photo-card__image"></div>
+        <button type="button" class="photo-card__delete-button"></button>
+        <div class="photo-card__info">
+          <h2 class="photo-card__title"></h2>
+          <button type="button" class="photo-card__like-button"></button>
+        </div>
+      </li>
+    </template>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
