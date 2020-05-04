@@ -1,7 +1,6 @@
 @import url("./modal-field/modal-field.css");
-@import url("./modal_picture.css");
-@import url("./modal_opened.css");
-@import url("./modal-container.css");
+@import url("./_opened/modal_opened.css");
+@import url("../modal/container/modal-container.css");
 @import url("./__image/modal__image.css");
 @import url("./__title/modal__title.css");
 
@@ -11,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
   visibility: hidden;
-  opacity: 0;
+  opacity: 0.5;
   transition: visibility 0s, opacity 0.5s linear;
-  position: absolute;
+  position: fixed;
 }

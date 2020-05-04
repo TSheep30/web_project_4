@@ -9,6 +9,7 @@
   position: relative;
   top: -264px;
   left: 252px;
+  cursor: pointer;
 }
 
 .photo-card__delete-button:hover {

@@ -8,6 +8,9 @@
   text-align: center;
   margin-top: -4px;
   margin-bottom: 32px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -17,5 +20,6 @@
     line-height: 22px;
     margin-left: 150px;
     margin-top: -76px;
+    max-width: 300px;
   }
 }
