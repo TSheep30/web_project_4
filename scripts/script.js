@@ -45,6 +45,12 @@ const initialCards = [
 //function declarations
 function togglePopup(modal) {
   modal.classList.toggle("modal_opened");
+  name.setAttribute("placeholder", profileName.textContent);
+  aboutMe.setAttribute("placeholder", profileAboutMe.textContent);
+
+  console.log(name);
+
+  console.log(profileAboutMe);
 }
 
 function changeDetails(evt) {
@@ -52,7 +58,6 @@ function changeDetails(evt) {
 
   profileName.textContent = name.value;
   profileAboutMe.textContent = aboutMe.value;
-  popupEdit.setAttribute("class", "modal");
 }
 
 function createCard(card) {
@@ -64,17 +69,15 @@ function createCard(card) {
     ".photo-card__delete-button"
   );
 
-  togglePopup(popupAdd);
-
   photoImage.style.backgroundImage = `url(${card.link})`;
   photoTitle.textContent = card.name;
   bigPicture.setAttribute("alt", card.name);
 
   photoImage.addEventListener("click", () => {
-    togglePopup(popupPicture);
     bigPictureTitle.textContent = photoTitle.textContent;
     bigPicture.src = card.link;
     bigPicture.setAttribute("alt", bigPictureTitle.textContent);
+    togglePopup(popupPicture);
   });
 
   photoLikeButton.addEventListener("click", () => {
@@ -89,8 +92,8 @@ function createCard(card) {
 }
 
 function renderCard(card) {
-  const photoList = document.querySelector(".photos__list");
   photoList.prepend(createCard(card));
+  togglePopup(popupAdd);
 }
 
 //create new cards
@@ -118,7 +121,7 @@ pictureCloseButton.addEventListener("click", () => {
   togglePopup(popupPicture);
 });
 popupEdit.addEventListener("submit", changeDetails);
-createButton.addEventListener("click", newCard);
+createButton.addEventListener("submit", newCard);
 
 //render initial 6 cards
 initialCards.forEach((card) => {

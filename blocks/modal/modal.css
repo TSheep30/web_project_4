@@ -1,6 +1,6 @@
 @import url("./modal-field/modal-field.css");
 @import url("./_opened/modal_opened.css");
-@import url("../modal/container/modal-container.css");
+@import url("../modal/modal-container/modal-container.css");
 @import url("./__image/modal__image.css");
 @import url("./__title/modal__title.css");
 
