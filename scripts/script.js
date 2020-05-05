@@ -42,11 +42,12 @@ const initialCards = [
     link: "https://code.s3.yandex.net/web-code/lago.jpg",
   },
 ];
+
 //function declarations
 function togglePopup(modal) {
   modal.classList.toggle("modal_opened");
-  name.setAttribute("placeholder", profileName.textContent);
-  aboutMe.setAttribute("placeholder", profileAboutMe.textContent);
+  name.setAttribute("value", profileName.textContent);
+  aboutMe.setAttribute("value", profileAboutMe.textContent);
 }
 
 function changeDetails(evt) {
@@ -54,6 +55,7 @@ function changeDetails(evt) {
 
   profileName.textContent = name.value;
   profileAboutMe.textContent = aboutMe.value;
+  togglePopup(popupEdit);
 }
 
 function createCard(card) {
@@ -89,7 +91,7 @@ function createCard(card) {
 
 function renderCard(card) {
   photoList.prepend(createCard(card));
-  togglePopup(popupAdd);
+
 }
 
 //create new cards
@@ -98,6 +100,7 @@ function newCard(evt) {
   const photoLink = popupAdd.querySelector(".modal-field__link");
   const photoPlace = popupAdd.querySelector(".modal-field__place");
   renderCard({ name: photoPlace.value, link: photoLink.value });
+  togglePopup(popupAdd);
 }
 
 // Event Listeners
@@ -117,7 +120,7 @@ pictureCloseButton.addEventListener("click", () => {
   togglePopup(popupPicture);
 });
 popupEdit.addEventListener("submit", changeDetails);
-createButton.addEventListener("submit", newCard);
+popupAdd.addEventListener("submit", newCard);
 
 //render initial 6 cards
 initialCards.forEach((card) => {
