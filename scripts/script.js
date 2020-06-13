@@ -122,7 +122,19 @@ pictureCloseButton.addEventListener("click", () => {
 popupEdit.addEventListener("submit", changeDetails);
 popupAdd.addEventListener("submit", newCard);
 
+window.addEventListener('keyup', function (evt) {
+  if (evt.key === 'Escape') {
+    togglePopup(popupPicture);
+  }
+});
+
+popupPicture.addEventListener('click', function (evt) {
+  togglePopup(popupPicture);
+})
+
 //render initial 6 cards
 initialCards.forEach((card) => {
   renderCard(card);
 });
+
+

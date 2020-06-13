@@ -1,0 +1,11 @@
+.modal-field__error{
+    color: red;
+    font-size: .75rem;
+    margin-left: 36px;
+    opacity: 0;
+    margin-top: 2px;  
+}
+
+.modal-field__error_visible{
+    opacity: 1;
+}

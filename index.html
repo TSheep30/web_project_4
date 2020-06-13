@@ -12,20 +12,28 @@
 
 <body class="page">
   <section class="modal modal_edit">
-    <form class="modal-field">
+    <form class="modal-field" novalidate>
       <button type="button" class="modal-field__button_close modal-field__button_close-edit"></button>
       <h2 class="modal-field__title">Edit Profile</h2>
-      <input type="text" class="modal-field__name" placeholder="Name" />
-      <input type="text" class="modal-field__about-me" placeholder="About me" />
+      <input type="text" class="modal-field__name modal-field__input" id="profile-name" placeholder="Name" minlength="2"
+        maxlength="40" required />
+      <span class="modal-field__error" id="profile-name-error"></span>
+      <input type="text" class="modal-field__about-me modal-field__input" id="profile-description"
+        placeholder="About me" minlength="2" maxlength="200" required />
+      <span class="modal-field__error" id="profile-description-error"></span>
       <input type="submit" value="Save" class="modal-field__button modal-field__button_save" />
     </form>
   </section>
   <section class="modal modal_add">
-    <form class="modal-field">
+    <form class="modal-field" novalidate>
       <button type="button" class="modal-field__button_close modal-field__button_close-add"></button>
       <h2 class="modal-field__title">New Place</h2>
-      <input type="text" class="modal-field__place" placeholder="Title" />
-      <input type="url" class="modal-field__link insert_url" placeholder="Image link" />
+      <input type="text" class="modal-field__place modal-field__input" placeholder="Title" required minlength="1"
+        maxlength="30" id="place-name" />
+      <span class="modal-field__error" id="place-name-error"></span>
+      <input type="url" class="modal-field__link insert_url modal-field__input" placeholder="Image link" id="place-url"
+        required />
+      <span class="modal-field__error" id="place-url-error"></span>
       <input type="submit" value="Create" class="modal-field__button modal-field__button_create"
         placeholder="Image link" />
     </form>
@@ -72,6 +80,7 @@
     </li>
   </template>
   <script src="./scripts/script.js"></script>
+  <script src="./scripts/validation.js"></script>
 </body>
 
 </html>

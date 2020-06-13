@@ -23,3 +23,9 @@
     width: 358px;
   }
 }
+
+.modal-field__button_disabled{
+  background-color: #FFFFFF;
+    color: #000000;
+    opacity: 0.2;
+}

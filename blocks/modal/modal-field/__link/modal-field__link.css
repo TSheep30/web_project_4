@@ -16,3 +16,6 @@
     }
   }
   
+  .modal-field__link:invalid{
+    border-bottom: 1px solid red;
+  }

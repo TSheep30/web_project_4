@@ -15,3 +15,7 @@
     width: 358px;
   }
 }
+
+.modal-field__name:invalid{
+  border-bottom: 1px solid red;
+}
