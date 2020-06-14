@@ -2,34 +2,40 @@
   src: url(./Inter-Regular.otf);
   font-family: "Inter";
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   src: url(./Inter-Bold.otf);
   font-family: "Inter";
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   src: url(./Inter-Regular.ttf);
   font-family: "Inter";
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   src: url(./Inter-Bold.ttf);
   font-family: "Inter";
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   src: url(./Inter-Regular.woff);
   font-family: "Inter";
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   src: url(./Inter-Bold.woff);
   font-family: "Inter";
   font-weight: bold;
+  font-display: swap;
 }

@@ -1,7 +1,6 @@
 .photos__list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 16px;
   max-width: 894px;
   margin: auto;
   padding: 0;

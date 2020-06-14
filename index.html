@@ -7,45 +7,10 @@
 
   <title>Around the US</title>
 
-  <link rel="stylesheet" href="./page/index.css" />
+  <link rel="stylesheet" href="./index.css" />
 </head>
 
 <body class="page">
-  <section class="modal modal_edit">
-    <form class="modal-field" novalidate>
-      <button type="button" class="modal-field__button_close modal-field__button_close-edit"></button>
-      <h2 class="modal-field__title">Edit Profile</h2>
-      <input type="text" class="modal-field__name modal-field__input" id="profile-name" placeholder="Name" minlength="2"
-        maxlength="40" required />
-      <span class="modal-field__error" id="profile-name-error"></span>
-      <input type="text" class="modal-field__about-me modal-field__input" id="profile-description"
-        placeholder="About me" minlength="2" maxlength="200" required />
-      <span class="modal-field__error" id="profile-description-error"></span>
-      <input type="submit" value="Save" class="modal-field__button modal-field__button_save" />
-    </form>
-  </section>
-  <section class="modal modal_add">
-    <form class="modal-field" novalidate>
-      <button type="button" class="modal-field__button_close modal-field__button_close-add"></button>
-      <h2 class="modal-field__title">New Place</h2>
-      <input type="text" class="modal-field__place modal-field__input" placeholder="Title" required minlength="1"
-        maxlength="30" id="place-name" />
-      <span class="modal-field__error" id="place-name-error"></span>
-      <input type="url" class="modal-field__link insert_url modal-field__input" placeholder="Image link" id="place-url"
-        required />
-      <span class="modal-field__error" id="place-url-error"></span>
-      <input type="submit" value="Create" class="modal-field__button modal-field__button_create"
-        placeholder="Image link" />
-    </form>
-  </section>
-
-  <section class="modal modal_picture">
-    <div class="modal-container">
-      <button type="button" class="modal-field__button_close modal-field__button_close-picture"></button>
-      <img src="" class="modal__image" />
-      <p class="modal__title"></p>
-    </div>
-  </section>
 
   <header class="header">
     <img src="./images/logo.svg" class="header__logo" alt="logo" />
@@ -69,6 +34,42 @@
   <footer class="footer">
     <p class="footer__copyright">© 2020 Around The U.S.</p>
   </footer>
+
+  <section class="modal modal_edit">
+    <form class="modal-field" novalidate>
+      <button type="button" class="modal-field__button_close modal-field__button_close-edit"></button>
+      <h2 class="modal-field__title">Edit Profile</h2>
+      <input type="text" class="modal-field__name modal-field__input" id="profile-name" placeholder="Name" minlength="2"
+        maxlength="40" required />
+      <span class="modal-field__error" id="profile-name-error"></span>
+      <input type="text" class="modal-field__about-me modal-field__input" id="profile-description"
+        placeholder="About me" minlength="2" maxlength="200" required />
+      <span class="modal-field__error" id="profile-description-error"></span>
+      <input type="submit" value="Save" class="modal-field__button modal-field__button_save" />
+    </form>
+  </section>
+  <section class="modal modal_add">
+    <form class="modal-field" novalidate>
+      <button type="button" class="modal-field__button_close modal-field__button_close-add"></button>
+      <h2 class="modal-field__title">New Place</h2>
+      <input type="text" class="modal-field__place modal-field__input" placeholder="Title" required minlength="1"
+        maxlength="30" id="place-name" />
+      <span class="modal-field__error" id="place-name-error"></span>
+      <input type="url" class="modal-field__link insert_url modal-field__input" placeholder="Image link" id="place-url"
+        required />
+      <span class="modal-field__error" id="place-url-error"></span>
+      <input type="submit" value="Create" class="modal-field__button modal-field__button_create" />
+    </form>
+  </section>
+
+  <section class="modal modal_picture">
+    <div class="modal-container">
+      <button type="button" class="modal-field__button_close modal-field__button_close-picture"></button>
+      <img src="" class="modal__image" />
+      <p class="modal__title"></p>
+    </div>
+  </section>
+
   <template class="template-card">
     <li class="photo-card">
       <div class="photo-card__image"></div>
@@ -79,6 +80,7 @@
       </div>
     </li>
   </template>
+
   <script src="./scripts/script.js"></script>
   <script src="./scripts/validation.js"></script>
 </body>

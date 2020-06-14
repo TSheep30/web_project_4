@@ -9,7 +9,6 @@ const profileAboutMe = document.querySelector(".profile__about-me");
 const addButton = document.querySelector(".profile__add-button");
 const popupAdd = document.querySelector(".modal_add");
 const addCloseButton = document.querySelector(".modal-field__button_close-add");
-const createButton = document.querySelector(".modal-field__button_create");
 const templateCard = document.querySelector(".template-card").content.querySelector(".photo-card");
 const popupPicture = document.querySelector(".modal_picture");
 const bigPicture = document.querySelector(".modal__image");
@@ -122,15 +121,15 @@ pictureCloseButton.addEventListener("click", () => {
 popupEdit.addEventListener("submit", changeDetails);
 popupAdd.addEventListener("submit", newCard);
 
-window.addEventListener('keyup', function (evt) {
+window.addEventListener('keyup', (evt) => {
   if (evt.key === 'Escape') {
     togglePopup(popupPicture);
   }
 });
 
-popupPicture.addEventListener('click', function (evt) {
+popupPicture.addEventListener('click', () => {
   togglePopup(popupPicture);
-})
+});
 
 //render initial 6 cards
 initialCards.forEach((card) => {
