@@ -115,9 +115,6 @@ addButton.addEventListener("click", () => {
 addCloseButton.addEventListener("click", () => {
   togglePopup(popupAdd);
 });
-pictureCloseButton.addEventListener("click", () => {
-  togglePopup(popupPicture);
-});
 popupEdit.addEventListener("submit", changeDetails);
 popupAdd.addEventListener("submit", newCard);
 
@@ -129,6 +126,10 @@ window.addEventListener('keyup', (evt) => {
 
 popupPicture.addEventListener('click', () => {
   togglePopup(popupPicture);
+});
+
+pictureCloseButton.addEventListener("click", () => {
+  togglePopup(pictureCloseButton);
 });
 
 //render initial 6 cards
