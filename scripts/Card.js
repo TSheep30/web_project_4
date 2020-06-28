@@ -19,22 +19,16 @@ class Card {
         const photoImage = _card.querySelector(".photo-card__image");
 
         photoLikeButton.addEventListener("click", () => {
-            console.log("1");
             photoLikeButton.classList.toggle("photo-card__like-button_on");
         });
 
         photoDeleteButton.addEventListener("click", () => {
-            console.log("2");
-
             _card.remove();
         });
 
         photoImage.addEventListener("click", () => {
-            console.log("3");
-            console.log(document);
 
             document.querySelector(".modal__title").textContent = this._name;
-            console.log(document.querySelector(".modal__title").textContent);
             document.querySelector(".modal__image").src = this._link;
             document.querySelector(".modal__image").setAttribute("alt", document.querySelector(".modal__title").textContent);
             document.querySelector(".modal_picture").classList.toggle("modal_opened");
