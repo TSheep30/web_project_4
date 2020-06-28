@@ -1,19 +1,36 @@
-//global variable declarations
-const editButton = document.querySelector(".profile__edit-button");
+import FormValidation from "./FormValidation.js";
+import Card from "./Card.js";
+
+const defaultConfig = {
+  inputSelector: ".modal-field__input",
+  submitButtonSelector: ".modal-field__button",
+  inactiveButtonSelector: "modal-field__button_disabled",
+  inputErrorClass: "modal-field__input_type_error",
+  errorClass: "modal-field__error_visible"
+}
+
+const popupAdd = document.querySelector(".modal_add");
 const popupEdit = document.querySelector(".modal_edit");
+
+const popupAddValidator = new FormValidation(defaultConfig, popupAdd);
+const popupEditValidator = new FormValidation(defaultConfig, popupEdit);
+
+popupAddValidator.enableValidation();
+popupEditValidator.enableValidation();
+
+//global variable declarations
+const cardTemplateSelector = document.querySelectorAll(".template-card");
+const editButton = document.querySelector(".profile__edit-button");
 const editCloseButton = document.querySelector(".modal-field__button_close-edit");
 const name = document.querySelector(".modal-field__name");
 const aboutMe = document.querySelector(".modal-field__about-me");
 const profileName = document.querySelector(".profile__name");
 const profileAboutMe = document.querySelector(".profile__about-me");
 const addButton = document.querySelector(".profile__add-button");
-const popupAdd = document.querySelector(".modal_add");
 const addCloseButton = document.querySelector(".modal-field__button_close-add");
 const templateCard = document.querySelector(".template-card").content.querySelector(".photo-card");
 const popupPicture = document.querySelector(".modal_picture");
-const bigPicture = document.querySelector(".modal__image");
 const pictureCloseButton = document.querySelector(".modal-field__button_close-picture");
-const bigPictureTitle = document.querySelector(".modal__title");
 const photoList = document.querySelector(".photos__list");
 const initialCards = [
   {
@@ -57,40 +74,10 @@ function changeDetails(evt) {
   togglePopup(popupEdit);
 }
 
-function createCard(card) {
-  const photoCard = templateCard.cloneNode(true);
-  const photoImage = photoCard.querySelector(".photo-card__image");
-  const photoTitle = photoCard.querySelector(".photo-card__title");
-  const photoLikeButton = photoCard.querySelector(".photo-card__like-button");
-  const photoDeleteButton = photoCard.querySelector(
-    ".photo-card__delete-button"
-  );
+const renderCard = (data, cardTemplateSelector) => {
+  const card = new Card(data, cardTemplateSelector);
 
-  photoImage.style.backgroundImage = `url(${card.link})`;
-  photoTitle.textContent = card.name;
-  bigPicture.setAttribute("alt", card.name);
-
-  photoImage.addEventListener("click", () => {
-    bigPictureTitle.textContent = photoTitle.textContent;
-    bigPicture.src = card.link;
-    bigPicture.setAttribute("alt", bigPictureTitle.textContent);
-    togglePopup(popupPicture);
-  });
-
-  photoLikeButton.addEventListener("click", () => {
-    photoLikeButton.classList.toggle("photo-card__like-button_on");
-  });
-
-  photoDeleteButton.addEventListener("click", () => {
-    photoCard.remove();
-  });
-
-  return photoCard;
-}
-
-function renderCard(card) {
-  photoList.prepend(createCard(card));
-
+  photoList.prepend(card.createCard());
 }
 
 //create new cards
@@ -98,7 +85,7 @@ function newCard(evt) {
   evt.preventDefault();
   const photoLink = popupAdd.querySelector(".modal-field__link");
   const photoPlace = popupAdd.querySelector(".modal-field__place");
-  renderCard({ name: photoPlace.value, link: photoLink.value });
+  renderCard({ name: photoPlace.value, link: photoLink.value }, templateCard);
   togglePopup(popupAdd);
 }
 
@@ -134,7 +121,7 @@ pictureCloseButton.addEventListener("click", () => {
 
 //render initial 6 cards
 initialCards.forEach((card) => {
-  renderCard(card);
+  renderCard(card, templateCard);
 });
 
 
